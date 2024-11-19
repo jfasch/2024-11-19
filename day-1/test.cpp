@@ -20,7 +20,7 @@ int main()
 
     using todo_list = std::map<std::string, tdl_value>;
 
-    const todo_list tdl = {
+    todo_list tdl = {
         {"up 1 to 10",
          [prefix="blah"]() {
              for (int i=1; i<=10; i++) {
@@ -39,11 +39,13 @@ int main()
         },
     };
 
-    // for (const auto& [name, item]: tdl) {
-    //     std::cout << "NAME: " << name << ": ";
-    //     item();
-    //     std::cout << '\n';
-    // }
+    // create threads for each item
+    for (auto& [_, item]: tdl)
+        item = std::make_shared<std::thread>(std::get<0>(item));
+
+    // wait for termination
+    for (auto& [_, item]: tdl)
+        std::get<1>(item)->join();
 
     return 0;
 }

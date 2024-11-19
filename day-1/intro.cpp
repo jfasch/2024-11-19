@@ -1,20 +1,35 @@
 #include <map>
 #include <string>
 #include <iostream>
+#include <memory>
+#include <functional>
+
 
 int main()
 {
-    using todo_list = std::map<std::string, std::string>;
+    using todo_list = std::map<std::string, std::function<void()>>;
 
-    todo_list tdl;
-    tdl["up 1 to 10"] = "prefix: 'UP', count up from 1 to 10, interval 1 second";
-    tdl["down 1000 to 980"] = "prefix: 'DOWN', count down from 1000 to 980, interval 0.5 second";
+    const todo_list tdl = {
+        {
+            "up 1 to 10",
+            [prefix="blah"]() -> void {
+                for (int i=1; i<=10; i++)
+                    std::cout << prefix << ", UP: " << i << std::endl;
+            }
+        },
+        {
+            "down 1000 to 980",
+            []() -> void {
+                for (int i=1000; i>=980; i--)
+                    std::cout << "DOWN: " << i << std::endl;
+            }
+        },
+    };
 
-    for (todo_list::const_iterator it=tdl.begin(); it!= tdl.end(); ++it) {
-        std::string name = it->first;
-        std::string desc = it->second;
-
-        std::cout << "NAME: " << name << ", DESC: " << desc << std::endl;
+    for (const auto& [name, item]: tdl) {
+        std::cout << "NAME: " << name << '\n';
+        item();
+        std::cout << '\n';
     }
 
     return 0;

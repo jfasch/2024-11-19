@@ -1,6 +1,12 @@
 add_executable(intro intro.cpp)
+add_executable(map-pitfall-no1 map-pitfall-no1.cpp)
+add_executable(brace-init brace-init.cpp)
+add_executable(shared-ptr-memory-mgmt shared-ptr-memory-mgmt.cpp)
+add_executable(unique-ptr-memory-mgmt unique-ptr-memory-mgmt.cpp)
+add_executable(rvo-or-not rvo-or-not.cpp)
+add_executable(push-back-move push-back-move.cpp)
+add_executable(structured-binding structured-binding.cpp)
+add_executable(functor functor.cpp)
+add_executable(sort-lambda sort-lambda.cpp)
+add_executable(async async.cpp)
 
-
-
-
-add_executable(test test.cpp)

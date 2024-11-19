@@ -4,7 +4,8 @@ plan
 * start from original intro.cpp
 * wrap string into ``class Item``
 
-  * initially have member "prefix" (for later, lambda capture)
+  * initially have member "prefix" in one of the derived classes (for
+    later, lambda capture)
   * PITFALL #1
   * def ctor necessary for std::map, when inserting via operator[]()
   * show how map::insert() is used
