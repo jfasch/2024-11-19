@@ -11,4 +11,5 @@ if ("${CMAKE_C_COMPILER_ID}" STREQUAL GNU)
    endif()
 endif()
 
-add_subdirectory(day-1)
+add_subdirectory(2024-11-19)
+add_subdirectory(2024-11-20)
