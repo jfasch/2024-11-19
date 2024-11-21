@@ -1,1 +1,7 @@
-add_executable(intro intro.cpp)
+add_executable(intro-2024-11-20 intro.cpp)
+add_executable(map-index-operator-2024-11-20 map-index-operator.cpp)
+add_executable(shared-ptr-2024-11-20 shared-ptr.cpp)
+add_executable(unique-ptr-2024-11-20 unique-ptr.cpp)
+add_executable(move-further-info-2024-11-20 move-further-info.cpp)
+add_executable(lamba-functor-2024-11-20 lamba-functor.cpp)
+add_executable(lamba-sort-2024-11-20 lamba-sort.cpp)

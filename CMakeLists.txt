@@ -13,3 +13,4 @@ endif()
 
 add_subdirectory(2024-11-19)
 add_subdirectory(2024-11-20)
+add_subdirectory(2024-11-21)
