@@ -12,5 +12,7 @@ if ("${CMAKE_C_COMPILER_ID}" STREQUAL GNU)
 endif()
 
 add_subdirectory(2024-11-19)
-add_subdirectory(2024-11-20)
-add_subdirectory(2024-11-21)
+
+# moved to attic
+#   add_subdirectory(2024-11-20)
+#   add_subdirectory(2024-11-21)

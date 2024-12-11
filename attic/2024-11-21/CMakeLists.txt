@@ -1,0 +1,7 @@
+add_executable(intro intro.cpp)
+add_executable(map-index-operator map-index-operator.cpp)
+add_executable(shared-ptr shared-ptr.cpp)
+add_executable(unique-ptr unique-ptr.cpp)
+add_executable(move move.cpp)
+add_executable(pythonicity pythonicity.cpp)
+add_executable(functor-lambda functor-lambda.cpp)
